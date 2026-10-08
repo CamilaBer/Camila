@@ -1,59 +1,421 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width.initial-escale=1.0">
-        <title>PRIME </title>
-        <link rel="stylesheet" href="Style.css">
-    </head>
+<html lang="en">
 
-    <body>
-        <header>
-            <h1> Mi aplicacion web</h1>
-            <p> Aprendiendo a crear aplicaciones desde cero</p>
-        </header>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PRIME - Sports Platform</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Styles.css">
+
+</head>
+
+
+<body class="home">
+
+
+    <!-- =====================================================
+         HEADER / NAVIGATION
+    ====================================================== -->
+
+    <header>
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+            PRIME<span>.</span>
+        </a>
+
+
+        <!-- NAVIGATION -->
 
         <nav>
-            <a href="inicio">Inicio</a>
-            <a href="#proyecto"> Mi proyecto</a>
-            <a href="#contacto"> Contacto</a>
+            <a href="index.html">
+                 Home
+                </a>
+            
+            <a href="courts.html">
+                Courts
+            </a>
+            
+            <a href="community.html">
+                Community
+            </a>
+            
+            <a href="blog.html">
+                Blog
+            </a>
+            
+            <a href="contact.html">
+                Contact
+            </a>
+        
         </nav>
 
-        <main> 
-            <section id="Inicio" class ="principal">
 
-                <h2> Bienvenidos </h2>
+        <!-- SIGN IN -->
+
+        <a href="signin.html" class="signin-button">
+            Sign In
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            SPORTS PLATFORM
+        </div>
+
+        <h1>
+            CONNECT, TRAIN<br>
+            AND PLAY,<br>
+            WITH <span>PRIME.</span>
+        </h1>
+
         <p>
-            Esta aplicacion fue creada utilizando HTML y CSS. 
+            Find courts, connect with athletes and take your
+            game to the next level.
         </p>
 
-        <button> Conoce mas</button>
+        <div class="hero-buttons">
 
-            </section>
-        <section id = "Proyecto" class="tarjetas">
+            <a href="courts.html" class="btn">
+                EXPLORE COURTS
+            </a>
 
-            <h2>Que ofrecemos?</h2>
-            
-            <div class= "tarjeta">
-                <h3> Inovacion</h3>
+            <a href="community.html" class="btn secondary-btn">
+                JOIN COMMUNITY
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <!-- =================================================
+             FEATURE / COURTS
+        ================================================== -->
+
+        <section class="home-feature">
+
+            <div>
+
+                <div class="hero-label">
+                    FIND YOUR GAME
+                </div>
+
+
+                <h2>
+                    COURTS MADE<br>
+                    FOR YOU.
+                </h2>
+
+
                 <p>
-                    Transformamos ideas en proyectos.
-                </p>
-            </div>
 
-            <div class= "tarjeta">
-                <h3> Tecnologia</h3>
-                <p>
-                    Utilizamos herramientas digitales.
+                    Discover nearby courts, book your favorite
+                    sports and meet other players.
+
                 </p>
+
+
+                <a
+                    href="courts.html"
+                    class="btn"
+                >
+                    EXPLORE COURTS
+                </a>
+
             </div>
 
         </section>
 
-        </main>
 
-        <footter id= "contacto">
-            <p> ©2026 Mi Aplicacion</p>
-        </footter>
-    </body>
+
+        <!-- =================================================
+             COMMUNITY
+        ================================================== -->
+
+        <section class="home-community">
+
+            <div>
+
+                <div class="hero-label">
+                    COMMUNITY
+                </div>
+
+
+                <h2>
+                    TRAIN TOGETHER.<br>
+                    PLAY BETTER.
+                </h2>
+
+
+                <p>
+
+                    Join groups, find teammates and create
+                    matches with people who share your passion.
+
+                </p>
+
+
+                <a
+                    href="community.html"
+                    class="btn"
+                >
+                    JOIN COMMUNITY
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BLOG
+        ================================================== -->
+
+        <section class="home-blog">
+
+            <div>
+
+                <div class="hero-label">
+                    PRIME BLOG
+                </div>
+
+
+                <h2>
+                    TRAIN SMARTER.<br>
+                    PLAY BETTER.
+                </h2>
+
+
+                <p>
+
+                    Discover training tips, sports news,
+                    health advice and stories from our community.
+
+                </p>
+
+
+                <a
+                    href="blog.html"
+                    class="btn"
+                >
+                    READ BLOG
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROFILE
+        ================================================== -->
+
+        <section class="home-profile">
+
+            <div>
+
+                <div class="hero-label">
+                    YOUR PROFILE
+                </div>
+
+
+                <h2>
+                    YOUR PROGRESS,<br>
+                    ALWAYS IN VIEW.
+                </h2>
+
+
+                <p>
+
+                    Keep track of your matches, workouts,
+                    favorite sports and achievements.
+
+                </p>
+
+
+                <a
+                    href="profile.html"
+                    class="btn"
+                >
+                    VIEW PROFILE
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+
+        <!-- PRIME -->
+
+        <div>
+
+            <h2>
+                PRIME<span>.</span>
+            </h2>
+
+            <p>
+
+                Connect, train, and play.
+                The platform that unites
+                the sports community.
+
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    IG
+                </a>
+
+                <a href="#">
+                    FB
+                </a>
+
+                <a href="#">
+                    TT
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <div>
+
+            <h3>
+                NAVIGATION
+            </h3>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="courts.html">
+                Courts
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+
+
+        <!-- COMMUNITY -->
+
+        <div>
+
+            <h3>
+                COMMUNITY
+            </h3>
+
+
+            <a href="community.html">
+                Groups
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="scoreboard.html">
+                Scoreboard
+            </a>
+
+        </div>
+
+
+
+        <!-- LEGAL -->
+
+        <div>
+
+            <h3>
+                LEGAL
+            </h3>
+
+
+            <a href="#">
+                Terms and conditions
+            </a>
+
+            <a href="#">
+                Privacy policy
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <!-- COPYRIGHT -->
+
+        <div>
+
+            <p>
+                © 2026 Prime. All rights reserved.
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>

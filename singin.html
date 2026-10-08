@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PRIME - Sign In</title>
+    <link rel="stylesheet" href="Styles.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <!-- ================= HEADER ================= -->
+
+        <section>
+
+            <p>
+                — ACCOUNT
+            </p>
+
+            <button>
+                ↑ Back to Courts
+            </button>
+
+            <h1>
+                SIGN IN
+            </h1>
+
+        </section>
+
+
+        <!-- ================= SIGN IN AREA ================= -->
+
+        <section>
+
+
+            <!-- ================= LOGIN FORM ================= -->
+
+            <div>
+
+                <form>
+
+                    <!-- EMAIL -->
+
+                    <label for="email">
+                        EMAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="youremail@example.com"
+                    >
+
+
+                    <!-- PASSWORD -->
+
+                    <label for="password">
+                        PASSWORD
+                    </label>
+
+                    <div>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="At least 8 characters"
+                        >
+
+                        <button
+                            type="button"
+                            onclick="showPassword()"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <!-- REMEMBER / FORGOT -->
+
+                    <div>
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="remember"
+                            >
+
+                            Remember me
+
+                        </label>
+
+
+                        <a href="#">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- SIGN IN BUTTON -->
+
+                    <button type="submit">
+                        SIGN IN
+                    </button>
+
+
+                    <!-- DIVIDER -->
+
+                    <div>
+
+                        <span></span>
+
+                        <p>
+                            or continue with
+                        </p>
+
+                        <span></span>
+
+                    </div>
+
+
+                    <!-- SOCIAL LOGIN -->
+
+                    <div>
+
+                        <button type="button">
+                            🌈 Google
+                        </button>
+
+                        <button type="button">
+                             Apple
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- ================= FAQ ================= -->
+
+            <div>
+
+                <h2>
+                    How do I create an account?
+                </h2>
+
+                <p>
+                    Click "Create one" on the left, fill in your
+                    name, email and password, then hit "Create
+                    account". You're ready to join the community.
+                </p>
+
+
+                <hr>
+
+
+                <div>
+
+                    <h2>
+                        Is my data secure?
+                    </h2>
+
+                    <button>
+                        +
+                    </button>
+
+                </div>
+
+
+                <hr>
+
+
+                <div>
+
+                    <h2>
+                        Can I sign in with Google or Apple?
+                    </h2>
+
+                    <button>
+                        +
+                    </button>
+
+                </div>
+
+
+                <hr>
+
+
+                <div>
+
+                    <h2>
+                        What if I forget my password?
+                    </h2>
+
+                    <button>
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function showPassword() {
+
+            const password =
+                document.getElementById("password");
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+            } else {
+
+                password.type = "password";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

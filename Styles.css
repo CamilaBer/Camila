@@ -1,0 +1,955 @@
+/* =========================================================
+   PRIME - MAIN STYLE
+   ========================================================= */
+
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================
+   GENERAL
+   ========================= */
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    padding: 90px 4%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 0.95;
+}
+
+h1 {
+    font-size: clamp(55px, 7vw, 120px);
+    font-weight: 900;
+    letter-spacing: -4px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    color: #a6a6a6;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+   ========================= */
+
+header {
+    width: 100%;
+    height: 82px;
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #050505;
+    border-bottom: 1px solid #171717;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: #ff5a00;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+nav a {
+    font-size: 17px;
+    color: #ff6500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:last-child {
+    background: #ff6500;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+nav a:last-child:hover {
+    background: #ff7a22;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+body.home {
+    background: #0b0b0b;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #0b0b0b;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label {
+    color: #ff5a00;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 8vw, 145px);
+    color: white;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: #ff5a00;
+}
+
+.hero p {
+    max-width: 550px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 17px 35px;
+    border-radius: 35px;
+    background: #ff5a00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #ff741f;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-page {
+    background: #0b0b0b;
+}
+
+.profile-page section:first-child {
+    padding-bottom: 45px;
+}
+
+.profile-card,
+.matches-card {
+    background: #171717;
+    border: 1px solid #383838;
+    border-radius: 35px;
+    padding: 35px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.profile-avatar {
+    width: 75px;
+    height: 75px;
+    background: #ff5a00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.profile-card h2 {
+    margin-top: 20px;
+}
+
+.profile-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.profile-tags span {
+    padding: 9px 18px;
+    border-radius: 30px;
+    background: #292929;
+    border: 1px solid #444;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.profile-stat {
+    background: #222;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.profile-stat strong {
+    display: block;
+    font-size: 30px;
+    color: #ff6500;
+}
+
+
+/* =========================================================
+   COURTS
+   ========================================================= */
+
+.courts-page {
+    background: #f7f7f7;
+    color: #090909;
+}
+
+.courts-page p {
+    color: #777;
+}
+
+.courts-page h1 {
+    color: #050505;
+}
+
+.court-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.court-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.court-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.court-info {
+    padding: 25px;
+}
+
+.court-info h2 {
+    margin-bottom: 8px;
+}
+
+.court-price {
+    margin: 25px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #090909;
+}
+
+.court-price span {
+    font-size: 15px;
+    font-weight: normal;
+    color: #777;
+}
+
+.court-button {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    border-radius: 30px;
+    background: #ff5a00;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   SIGN IN
+   ========================================================= */
+
+.signin-page {
+    background: #f8f8f8;
+    color: #090909;
+}
+
+.signin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.signin-form label {
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #657080;
+}
+
+.signin-form input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 17px;
+    border: 1px solid #ddd;
+    background: #f0f1f3;
+    font-size: 16px;
+    outline: none;
+}
+
+.signin-form input:focus {
+    border-color: #ff5a00;
+}
+
+.signin-button {
+    width: 100%;
+    padding: 18px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 35px;
+    background: #ff5a00;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   COMMUNITY
+   ========================================================= */
+
+.community-page {
+    background: #080808;
+}
+
+.community-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.community-intro p {
+    max-width: 650px;
+    font-size: 20px;
+}
+
+.community-button {
+    background: #ff5a00;
+    padding: 20px 30px;
+    border-radius: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.community-card {
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 25px;
+    padding: 35px;
+}
+
+.community-icon {
+    color: #ff5a00;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.community-card h2 {
+    margin-bottom: 8px;
+}
+
+.community-card > p {
+    margin: 30px 0;
+    font-size: 17px;
+}
+
+.community-actions {
+    border-top: 1px solid #292929;
+    padding-top: 20px;
+    display: flex;
+    gap: 25px;
+    color: #888;
+}
+
+
+/* =========================================================
+   SCOREBOARD
+   ========================================================= */
+
+.scoreboard-page {
+    background: #f7f7f7;
+    color: #090909;
+}
+
+.scoreboard-page h1 {
+    color: #050505;
+}
+
+.scoreboard {
+    background: #111;
+    border-radius: 35px;
+    padding: 55px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.score {
+    text-align: center;
+}
+
+.score strong {
+    display: block;
+    color: #ff5a00;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.score p {
+    color: #9ca3af;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.testimonial {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    color: #111;
+}
+
+.testimonial > p {
+    color: #111;
+    font-size: 18px;
+    min-height: 120px;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.testimonial-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ff5a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BLOG
+   ========================================================= */
+
+.blog-page {
+    background: #f8f8f8;
+    color: #090909;
+}
+
+.blog-page h1 {
+    text-align: center;
+    color: #080808;
+}
+
+.blog-label {
+    text-align: center;
+    color: #ff5a00;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.blog-grid {
+    max-width: 1050px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 35px;
+}
+
+.blog-category {
+    color: #ff5a00;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.blog-content h2 {
+    margin: 15px 0;
+    font-size: 30px;
+    color: #111;
+}
+
+.blog-date {
+    color: #888;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-page {
+    background: #0b0b0b;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact-form label {
+    display: block;
+    color: #aab0b9;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: #171717;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 17px;
+    padding: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff5a00;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    border: none;
+    border-radius: 35px;
+    background: #ff5a00;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 35px rgba(255, 90, 0, 0.25);
+}
+
+.faq-item {
+    padding: 25px 0;
+    border-bottom: 1px solid #292929;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.faq-item h2 {
+    font-size: 20px;
+}
+
+.faq-item button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.contact-info {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.contact-info a {
+    background: #171717;
+    border: 1px solid #333;
+    padding: 12px 20px;
+    border-radius: 30px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: #080808;
+    color: white;
+    padding: 80px 4% 35px;
+    border-top: 1px solid #202020;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+footer h2 {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+footer h2 span {
+    color: #ff5a00;
+}
+
+footer h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+footer p {
+    max-width: 350px;
+    margin-top: 25px;
+}
+
+footer a {
+    display: block;
+    color: #9a9a9a;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #ff5a00;
+}
+
+footer > div:last-child {
+    grid-column: 1 / -1;
+    border-top: 1px solid #222;
+    padding-top: 30px;
+}
+
+footer > div:last-child p {
+    margin: 0;
+}
+
+
+/* =========================
+   SOCIAL BUTTONS
+   ========================= */
+
+.socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.socials a {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .profile-grid,
+    .signin-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .court-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scoreboard {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 65px 6%;
+    }
+
+    h1 {
+        font-size: 55px;
+        letter-spacing: -2px;
+    }
+
+    header {
+        height: auto;
+        padding: 20px 6%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a:last-child {
+        padding: 10px 20px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .court-grid,
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scoreboard {
+        grid-template-columns: 1fr 1fr;
+        padding: 35px 20px;
+    }
+
+    .score strong {
+        font-size: 42px;
+    }
+
+    .score p {
+        font-size: 11px;
+    }
+
+    .community-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .blog-card img {
+        height: 240px;
+    }
+
+    .blog-content {
+        padding: 25px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        padding: 60px 6% 30px;
+    }
+
+    footer > div:last-child {
+        grid-column: auto;
+    }
+
+}
+
+/* =========================
+   HOME - HERO BUTTONS
+   ========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    margin-top: 0;
+}
+
+.hero-buttons .secondary-btn {
+    background: transparent;
+    border: 1px solid #ff5a00;
+    color: #ff5a00;
+}
+
+.hero-buttons .secondary-btn:hover {
+    background: #ff5a00;
+    color: white;
+}
+
+/* =========================
+   HOME - HERO LAYOUT
+   ========================= */
+
+.hero {
+    min-height: 760px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    max-width: 560px;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+}
