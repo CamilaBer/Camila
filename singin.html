@@ -2,245 +2,314 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PRIME - Sign In</title>
     <link rel="stylesheet" href="Styles.css">
-
 </head>
 
-<body>
+<body class="signin-page">
+
+    <!-- ================= HEADER ================= -->
+    <header class="signin-header">
+        <a href="index.html" class="signin-logo">PRIME<span>.</span></a>
+
+        <a href="courts.html" class="signin-back">
+            <span>←</span> BACK TO COURTS
+        </a>
+    </header>
 
     <main>
 
-        <!-- ================= HEADER ================= -->
-
-        <section>
-
-            <p>
-                — ACCOUNT
-            </p>
-
-            <button>
-                ↑ Back to Courts
-            </button>
-
-            <h1>
-                SIGN IN
-            </h1>
-
-        </section>
-
-
-        <!-- ================= SIGN IN AREA ================= -->
-
-        <section>
-
-
-            <!-- ================= LOGIN FORM ================= -->
-
-            <div>
-
-                <form>
-
-                    <!-- EMAIL -->
-
-                    <label for="email">
-                        EMAIL
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="youremail@example.com"
-                    >
-
-
-                    <!-- PASSWORD -->
-
-                    <label for="password">
-                        PASSWORD
-                    </label>
-
-                    <div>
-
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="At least 8 characters"
-                        >
-
-                        <button
-                            type="button"
-                            onclick="showPassword()"
-                        >
-                            👁
-                        </button>
-
-                    </div>
-
-
-                    <!-- REMEMBER / FORGOT -->
-
-                    <div>
-
-                        <label>
-
-                            <input
-                                type="checkbox"
-                                name="remember"
-                            >
-
-                            Remember me
-
-                        </label>
-
-
-                        <a href="#">
-                            Forgot password?
-                        </a>
-
-                    </div>
-
-
-                    <!-- SIGN IN BUTTON -->
-
-                    <button type="submit">
-                        SIGN IN
-                    </button>
-
-
-                    <!-- DIVIDER -->
-
-                    <div>
-
-                        <span></span>
-
-                        <p>
-                            or continue with
-                        </p>
-
-                        <span></span>
-
-                    </div>
-
-
-                    <!-- SOCIAL LOGIN -->
-
-                    <div>
-
-                        <button type="button">
-                            🌈 Google
-                        </button>
-
-                        <button type="button">
-                             Apple
-                        </button>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-
-            <!-- ================= FAQ ================= -->
-
-            <div>
-
-                <h2>
-                    How do I create an account?
-                </h2>
-
-                <p>
-                    Click "Create one" on the left, fill in your
-                    name, email and password, then hit "Create
-                    account". You're ready to join the community.
+        <!-- ================= SIGN IN HERO ================= -->
+        <section class="signin-hero">
+            <div class="signin-hero-content">
+                <p class="signin-eyebrow">
+                    <span></span> YOUR GAME. YOUR COMMUNITY.
                 </p>
 
+                <h1>WELCOME<br><span>BACK.</span></h1>
 
-                <hr>
+                <p>
+                    Your next match, your favorite sports,
+                    and your community are just a step away.
+                </p>
 
+                <div class="signin-hero-points">
+                    <div>
+                        <span>01</span>
+                        <p>Discover courts near you</p>
+                    </div>
 
-                <div>
+                    <div>
+                        <span>02</span>
+                        <p>Connect with other athletes</p>
+                    </div>
 
-                    <h2>
-                        Is my data secure?
-                    </h2>
-
-                    <button>
-                        +
-                    </button>
-
+                    <div>
+                        <span>03</span>
+                        <p>Keep moving forward</p>
+                    </div>
                 </div>
-
-
-                <hr>
-
-
-                <div>
-
-                    <h2>
-                        Can I sign in with Google or Apple?
-                    </h2>
-
-                    <button>
-                        +
-                    </button>
-
-                </div>
-
-
-                <hr>
-
-
-                <div>
-
-                    <h2>
-                        What if I forget my password?
-                    </h2>
-
-                    <button>
-                        +
-                    </button>
-
-                </div>
-
             </div>
 
+            <!-- ================= LOGIN CARD ================= -->
+            <div class="signin-card">
+
+                <div class="signin-card-heading">
+                    <p class="signin-card-tag">YOUR PRIME ACCOUNT</p>
+                    <h2>Sign in<span>.</span></h2>
+                    <p>Enter your details to continue.</p>
+                </div>
+
+                <form id="primeSigninForm" class="signin-form">
+
+                    <div class="signin-field">
+                        <label for="signin-email">EMAIL ADDRESS</label>
+                        <input
+                            type="email"
+                            id="signin-email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="signin-field">
+                        <label for="signin-password">PASSWORD</label>
+
+                        <div class="signin-password-wrap">
+                            <input
+                                type="password"
+                                id="signin-password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="signin-show-password"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                SHOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="signin-options">
+                        <label class="signin-remember">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+
+                        <a href="#signin-help">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="signin-submit">
+                        SIGN IN <span>↗</span>
+                    </button>
+
+                    <p id="signinStatus" class="signin-status" aria-live="polite"></p>
+
+                    <div class="signin-divider">
+                        <span></span>
+                        <p>OR CONTINUE WITH</p>
+                        <span></span>
+                    </div>
+
+                    <div class="signin-social-buttons">
+                        <button type="button" class="signin-social" data-provider="Google">
+                            <span class="signin-google-mark">G</span>
+                            Google
+                        </button>
+
+                        <button type="button" class="signin-social" data-provider="Apple">
+                            <span class="signin-apple-mark">●</span>
+                            Apple
+                        </button>
+                    </div>
+
+                    <p id="signinSocialStatus" class="signin-social-status" aria-live="polite"></p>
+
+                    <p class="signin-signup">
+                        New to PRIME?
+                        <a href="#create-account-info">Create an account</a>
+                    </p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section class="signin-help" id="signin-help">
+
+            <div class="signin-help-intro">
+                <p class="signin-eyebrow">NEED A HAND?</p>
+                <h2>WE'VE GOT<br><span>ANSWERS.</span></h2>
+                <p>Some quick answers to help you get started.</p>
+            </div>
+
+            <div class="signin-faq-list">
+
+                <article class="signin-faq-item open">
+                    <button type="button" class="signin-faq-question" aria-expanded="true">
+                        <span>How do I create an account?</span>
+                        <span class="signin-faq-icon">−</span>
+                    </button>
+
+                    <div class="signin-faq-answer">
+                        <p>
+                            Account creation is not connected yet in this demo.
+                            A registration form and account service will need to
+                            be set up before users can create real accounts.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="signin-faq-item">
+                    <button type="button" class="signin-faq-question" aria-expanded="false">
+                        <span>Is my data secure?</span>
+                        <span class="signin-faq-icon">+</span>
+                    </button>
+
+                    <div class="signin-faq-answer">
+                        <p>
+                            This page is currently a front-end demonstration.
+                            It does not authenticate users or store account
+                            credentials. Real accounts require secure
+                            authentication and server-side protection.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="signin-faq-item">
+                    <button type="button" class="signin-faq-question" aria-expanded="false">
+                        <span>Can I sign in with Google or Apple?</span>
+                        <span class="signin-faq-icon">+</span>
+                    </button>
+
+                    <div class="signin-faq-answer">
+                        <p>
+                            The buttons are visual placeholders for now.
+                            Google or Apple sign-in must be connected to the
+                            corresponding authentication provider before use.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="signin-faq-item">
+                    <button type="button" class="signin-faq-question" aria-expanded="false">
+                        <span>What if I forget my password?</span>
+                        <span class="signin-faq-icon">+</span>
+                    </button>
+
+                    <div class="signin-faq-answer">
+                        <p>
+                            Password recovery is not connected yet. Once
+                            authentication is implemented, users will be able
+                            to request a secure password reset.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= CREATE ACCOUNT NOTE ================= -->
+        <section class="signin-create-note" id="create-account-info">
+            <p class="signin-eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+            <h2>READY TO JOIN<br><span>THE GAME?</span></h2>
+            <p>
+                PRIME's account registration is coming soon.
+                In the meantime, explore courts and discover the community.
+            </p>
+
+            <a href="community.html" class="signin-community-button">
+                EXPLORE COMMUNITY <span>↗</span>
+            </a>
         </section>
 
     </main>
 
-
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- ================= FOOTER ================= -->
+    <footer class="signin-footer">
+        <a href="index.html" class="signin-logo">PRIME<span>.</span></a>
+        <p>Built for the love of the game.</p>
+        <p class="signin-footer-copy">© 2026 PRIME. ALL RIGHTS RESERVED.</p>
+    </footer>
 
     <script>
+        // Show or hide password
+        const passwordInput = document.getElementById("signin-password");
+        const togglePasswordButton = document.getElementById("togglePassword");
 
-        function showPassword() {
+        togglePasswordButton.addEventListener("click", () => {
+            const showingPassword = passwordInput.type === "password";
 
-            const password =
-                document.getElementById("password");
+            passwordInput.type = showingPassword ? "text" : "password";
+            togglePasswordButton.textContent = showingPassword ? "HIDE" : "SHOW";
+            togglePasswordButton.setAttribute("aria-pressed", String(showingPassword));
+            togglePasswordButton.setAttribute(
+                "aria-label",
+                showingPassword ? "Hide password" : "Show password"
+            );
+        });
 
-            if (password.type === "password") {
+        // Demo-only sign-in message; no credentials are sent or saved.
+        const signinForm = document.getElementById("primeSigninForm");
+        const signinStatus = document.getElementById("signinStatus");
 
-                password.type = "text";
+        signinForm.addEventListener("submit", (event) => {
+            event.preventDefault();
 
-            } else {
+            signinStatus.textContent =
+                "Sign-in is not connected yet. A secure authentication service is needed to access an account.";
+        });
 
-                password.type = "password";
+        // Social sign-in placeholders
+        const socialButtons = document.querySelectorAll(".signin-social");
+        const socialStatus = document.getElementById("signinSocialStatus");
 
-            }
+        socialButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                socialStatus.textContent =
+                    button.dataset.provider +
+                    " sign-in is not connected yet.";
+            });
+        });
 
-        }
+        // FAQ accordion
+        const signinFaqItems = document.querySelectorAll(".signin-faq-item");
 
+        signinFaqItems.forEach((item) => {
+            const question = item.querySelector(".signin-faq-question");
+            const icon = item.querySelector(".signin-faq-icon");
+
+            question.addEventListener("click", () => {
+                const wasOpen = item.classList.contains("open");
+
+                signinFaqItems.forEach((otherItem) => {
+                    otherItem.classList.remove("open");
+                    otherItem.querySelector(".signin-faq-question")
+                        .setAttribute("aria-expanded", "false");
+                    otherItem.querySelector(".signin-faq-icon").textContent = "+";
+                });
+
+                if (!wasOpen) {
+                    item.classList.add("open");
+                    question.setAttribute("aria-expanded", "true");
+                    icon.textContent = "−";
+                }
+            });
+        });
     </script>
 
 </body>
-
 </html>

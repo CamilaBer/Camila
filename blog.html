@@ -2,238 +2,368 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PRIME - Blog</title>
     <link rel="stylesheet" href="Styles.css">
-
 </head>
 
-<body>
+<body class="blog-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+        <div class="header-content">
+
+            <a href="index.html" class="logo">PRIME<span></span></a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="courts.html">Courts</a>
+                <a href="community.html">Community</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="singin.html" class="header-button">Sign In</a>
+
+        </div>
+    </header>
+
 
     <main>
 
-        <!-- ================= BLOG HEADER ================= -->
+        <!-- ================= BLOG HERO ================= -->
 
-        <section>
+        <section class="blog-hero">
 
-            <p>
-                — BLOG
+            <div class="blog-hero-content">
+
+                <span class="section-label">THE PRIME JOURNAL</span>
+
+                <h1>
+                    LEVEL UP YOUR
+                    <span>GAME.</span>
+                </h1>
+
+                <p>
+                    Training tips, healthy habits, and stories that bring
+                    athletes together. Everything you need to keep moving
+                    forward.
+                </p>
+
+                <a href="#blog-articles" class="blog-primary-button">
+                    Explore Articles ↓
+                </a>
+
+            </div>
+
+            <div class="blog-hero-decoration">
+                <span class="blog-decoration-number">01</span>
+                <div class="blog-decoration-line"></div>
+                <span class="blog-decoration-text">TRAIN SMARTER. PLAY BETTER.</span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED ARTICLES ================= -->
+
+        <section class="blog-section" id="blog-articles">
+
+            <div class="blog-section-heading">
+
+                <div>
+                    <span class="section-label">FRESH FROM PRIME</span>
+                    <h2>Ideas that move <span>you.</span></h2>
+                </div>
+
+                <p>
+                    Discover new ways to train, recover, and connect through sports.
+                </p>
+
+            </div>
+
+
+            <div class="blog-grid">
+
+                <!-- ARTICLE 1 -->
+
+                <article class="blog-card">
+
+                    <a href="#article-1" class="blog-image-link">
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80"
+                                alt="Athlete training at the gym">
+
+                            <span class="blog-category">TRAINING</span>
+                        </div>
+                    </a>
+
+                    <div class="blog-card-content">
+
+                        <p class="blog-meta">JUL 28, 2026 · BY COACH RICARDO</p>
+
+                        <h3 id="article-1">
+                            4 routines to boost your endurance
+                        </h3>
+
+                        <p class="blog-excerpt">
+                            Discover ways to build stamina, improve consistency,
+                            and feel more prepared for your next training session.
+                        </p>
+
+                        <a href="#article-1" class="blog-read-more">
+                            Read Article <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 2 -->
+
+                <article class="blog-card">
+
+                    <a href="#article-2" class="blog-image-link">
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
+                                alt="Fitness training equipment">
+
+                            <span class="blog-category">HEALTH</span>
+                        </div>
+                    </a>
+
+                    <div class="blog-card-content">
+
+                        <p class="blog-meta">JUL 22, 2026 · BY COACH DANIEL</p>
+
+                        <h3 id="article-2">
+                            How to recover after a hard workout
+                        </h3>
+
+                        <p class="blog-excerpt">
+                            Learn why rest, hydration, and balanced nutrition
+                            are important parts of a healthy training routine.
+                        </p>
+
+                        <a href="#article-2" class="blog-read-more">
+                            Read Article <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 3 -->
+
+                <article class="blog-card">
+
+                    <a href="#article-3" class="blog-image-link">
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80"
+                                alt="Friends spending time together">
+
+                            <span class="blog-category">COMMUNITY</span>
+                        </div>
+                    </a>
+
+                    <div class="blog-card-content">
+
+                        <p class="blog-meta">JUL 15, 2026 · BY PRIME TEAM</p>
+
+                        <h3 id="article-3">
+                            Why training with a team makes a difference
+                        </h3>
+
+                        <p class="blog-excerpt">
+                            Explore how teamwork can encourage communication,
+                            motivation, and a stronger sense of belonging.
+                        </p>
+
+                        <a href="#article-3" class="blog-read-more">
+                            Read Article <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 4 -->
+
+                <article class="blog-card">
+
+                    <a href="#article-4" class="blog-image-link">
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80"
+                                alt="Football on a sports field">
+
+                            <span class="blog-category">SPORTS</span>
+                        </div>
+                    </a>
+
+                    <div class="blog-card-content">
+
+                        <p class="blog-meta">JUL 10, 2026 · BY COACH RICARDO</p>
+
+                        <h3 id="article-4">
+                            How to prepare for your next match
+                        </h3>
+
+                        <p class="blog-excerpt">
+                            Build a simple pre-game routine to help you feel
+                            organized, focused, and ready to play.
+                        </p>
+
+                        <a href="#article-4" class="blog-read-more">
+                            Read Article <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 5 -->
+
+                <article class="blog-card">
+
+                    <a href="#article-5" class="blog-image-link">
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1200&q=80"
+                                alt="Tennis court">
+
+                            <span class="blog-category">TRAINING</span>
+                        </div>
+                    </a>
+
+                    <div class="blog-card-content">
+
+                        <p class="blog-meta">JUL 4, 2026 · BY COACH LAURA</p>
+
+                        <h3 id="article-5">
+                            5 tips to improve your game
+                        </h3>
+
+                        <p class="blog-excerpt">
+                            Focus on practice, patience, technique, and
+                            learning from every game you play.
+                        </p>
+
+                        <a href="#article-5" class="blog-read-more">
+                            Read Article <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 6 -->
+
+                <article class="blog-card">
+
+                    <a href="#article-6" class="blog-image-link">
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80"
+                                alt="Person exercising on a mat">
+
+                            <span class="blog-category">HEALTH</span>
+                        </div>
+                    </a>
+
+                    <div class="blog-card-content">
+
+                        <p class="blog-meta">JUN 28, 2026 · BY PRIME TEAM</p>
+
+                        <h3 id="article-6">
+                            Build a better training routine
+                        </h3>
+
+                        <p class="blog-excerpt">
+                            Create realistic habits, find a schedule that
+                            works for you, and make time for recovery.
+                        </p>
+
+                        <a href="#article-6" class="blog-read-more">
+                            Read Article <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p class="blog-note">
+                Article dates and author names are sample information for this project.
+                The article previews are introductory summaries.
             </p>
 
-            <h1>
-                HEALTH, TRAINING AND COMMUNITY.
-            </h1>
-
         </section>
 
 
-        <!-- ================= BLOG POSTS ================= -->
+        <!-- ================= BLOG CTA ================= -->
 
-        <section>
+        <section class="blog-cta">
 
+            <div>
+                <span class="section-label">YOUR JOURNEY STARTS HERE</span>
 
-            <!-- ================= ARTICLE 1 ================= -->
+                <h2>
+                    Keep moving.
+                    <span>Keep growing.</span>
+                </h2>
 
-            <article>
+                <p>
+                    Find courts, connect with athletes, and make your next move with PRIME.
+                </p>
+            </div>
 
-                <img
-                    src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80"
-                    alt="People training"
-                >
-
-                <div>
-
-                    <p>
-                        TRAINING
-                    </p>
-
-                    <h2>
-                        4 routines to boost your endurance
-                    </h2>
-
-                    <p>
-                        Jul 28, 2026 · By Coach Ricardo
-                    </p>
-
-                    <a href="#">
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- ================= ARTICLE 2 ================= -->
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
-                    alt="Fitness training"
-                >
-
-                <div>
-
-                    <p>
-                        HEALTH
-                    </p>
-
-                    <h2>
-                        How to recover after a hard workout
-                    </h2>
-
-                    <p>
-                        Jul 22, 2026 · By Coach Daniel
-                    </p>
-
-                    <a href="#">
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- ================= ARTICLE 3 ================= -->
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80"
-                    alt="Sports community"
-                >
-
-                <div>
-
-                    <p>
-                        COMMUNITY
-                    </p>
-
-                    <h2>
-                        Why training with a team makes a difference
-                    </h2>
-
-                    <p>
-                        Jul 15, 2026 · By Prime Team
-                    </p>
-
-                    <a href="#">
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-        </section>
-
-
-        <!-- ================= MORE ARTICLES ================= -->
-
-        <section>
-
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80"
-                    alt="Football training"
-                >
-
-                <div>
-
-                    <p>
-                        SPORTS
-                    </p>
-
-                    <h2>
-                        How to prepare for your next match
-                    </h2>
-
-                    <p>
-                        Jul 10, 2026 · By Coach Ricardo
-                    </p>
-
-                    <a href="#">
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1200&q=80"
-                    alt="Tennis court"
-                >
-
-                <div>
-
-                    <p>
-                        TRAINING
-                    </p>
-
-                    <h2>
-                        5 tips to improve your game
-                    </h2>
-
-                    <p>
-                        Jul 4, 2026 · By Coach Laura
-                    </p>
-
-                    <a href="#">
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80"
-                    alt="Workout"
-                >
-
-                <div>
-
-                    <p>
-                        HEALTH
-                    </p>
-
-                    <h2>
-                        Build a better training routine
-                    </h2>
-
-                    <p>
-                        Jun 28, 2026 · By Prime Team
-                    </p>
-
-                    <a href="#">
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
+            <a href="courts.html" class="blog-primary-button">
+                Find Your Court ↗
+            </a>
 
         </section>
 
     </main>
 
-</body>
 
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">PRIME<span>.</span></a>
+                <p>Find your game. Find your people. Play more.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="courts.html">Courts</a>
+                <a href="community.html">Community</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 PRIME. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
 </html>

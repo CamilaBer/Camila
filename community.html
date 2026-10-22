@@ -2,163 +2,300 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PRIME - Community</title>
     <link rel="stylesheet" href="Styles.css">
 </head>
 
-<body>
+<body class="community-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+        <div class="header-content">
+
+            <a href="index.html" class="logo">PRIME<span></span></a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="courts.html">Courts</a>
+                <a href="community.html" class="active">Community</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="singin.html" class="header-button">Sign In</a>
+
+        </div>
+    </header>
+
 
     <main>
 
-        <!-- ================= COMMUNITY HEADER ================= -->
+        <!-- ================= COMMUNITY HERO ================= -->
 
-        <section>
+        <section class="community-hero">
 
-            <p>
-                COMMUNITY
-            </p>
+            <div class="community-hero-content">
 
-            <h1>
-                FIND YOUR<br>
-                NEXT TEAM.
-            </h1>
+                <span class="section-label">MORE THAN A GAME</span>
 
-            <p>
-                Create groups, organize matches, and share your progress
-                with people who train like you.
-            </p>
+                <h1>
+                    FIND YOUR
+                    <span>NEXT TEAM.</span>
+                </h1>
 
-            <a href="#">
-                Read more →
-            </a>
+                <p>
+                    Create groups, organize matches, and share your progress
+                    with people who train like you. Find your people and
+                    make every game count.
+                </p>
+
+                <a href="#community-groups" class="community-primary-button">
+                    Explore Community ↗
+                </a>
+
+                <div class="community-stats">
+
+                    <div>
+                        <strong>YOUR</strong>
+                        <span>Sports community</span>
+                    </div>
+
+                    <div>
+                        <strong>YOUR</strong>
+                        <span>Next match</span>
+                    </div>
+
+                    <div>
+                        <strong>YOUR</strong>
+                        <span>Team spirit</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="community-hero-visual">
+                <div class="community-visual-card">
+
+                    <span class="community-visual-label">THE NEXT GAME STARTS HERE</span>
+
+                    <div class="community-orbit">
+                        <div class="community-orbit-center">P<span>.</span></div>
+                        <span class="orbit-dot orbit-dot-one">⚽</span>
+                        <span class="orbit-dot orbit-dot-two">🏀</span>
+                        <span class="orbit-dot orbit-dot-three">🎾</span>
+                    </div>
+
+                    <h2>PLAY TOGETHER.</h2>
+                    <p>Connect. Compete. Improve.</p>
+
+                </div>
+            </div>
 
         </section>
 
 
         <!-- ================= COMMUNITY GROUPS ================= -->
 
-        <section>
+        <section class="community-groups-section" id="community-groups">
 
-
-            <!-- ================= GROUP 1 ================= -->
-
-            <article>
-
-                <!-- Group icon -->
+            <div class="community-section-heading">
 
                 <div>
-                    ● ● ●
+                    <span class="section-label">MEET YOUR PEOPLE</span>
+                    <h2>Find your <span>crew.</span></h2>
                 </div>
-
-
-                <!-- Group information -->
-
-                <div>
-
-                    <h2>
-                        Los Halcones FC
-                    </h2>
-
-                    <p>
-                        14 members · Soccer 5
-                    </p>
-
-                </div>
-
-
-                <!-- Description -->
 
                 <p>
-                    Looking for 2 players for Saturday’s match
-                    in Costa del Este. Intermediate level.
+                    Join a group, meet new teammates, and find your next game.
                 </p>
 
+            </div>
 
-                <!-- Interaction -->
+
+            <div class="community-group-grid">
+
+                <!-- ================= GROUP 1 ================= -->
+
+                <article class="community-group-card">
+
+                    <div class="group-card-top">
+
+                        <div class="group-avatar soccer-avatar">
+                            ⚽
+                        </div>
+
+                        <span class="group-category">SOCCER</span>
+
+                    </div>
+
+                    <div class="group-details">
+
+                        <h3>Los Halcones FC</h3>
+
+                        <p class="group-members">👥 14 members · Soccer 5</p>
+
+                        <p class="group-description">
+                            Looking for 2 players for Saturday's match
+                            in Costa del Este. Intermediate level.
+                        </p>
+
+                    </div>
+
+                    <div class="group-card-footer">
+
+                        <div class="group-engagement">
+                            <span>♥ 32</span>
+                            <span>💬 8 comments</span>
+                        </div>
+
+                        <button
+                            class="group-share-button"
+                            type="button"
+                            onclick="shareGroup('Los Halcones FC')">
+                            ↗ Share
+                        </button>
+
+                    </div>
+
+                    <div class="group-card-accent"></div>
+
+                </article>
+
+
+                <!-- ================= GROUP 2 ================= -->
+
+                <article class="community-group-card">
+
+                    <div class="group-card-top">
+
+                        <div class="group-avatar padel-avatar">
+                            🎾
+                        </div>
+
+                        <span class="group-category">PADEL</span>
+
+                    </div>
+
+                    <div class="group-details">
+
+                        <h3>Padel at Dawn</h3>
+
+                        <p class="group-members">👥 9 members · Padel</p>
+
+                        <p class="group-description">
+                            Recurring group every Tuesday at 6:00 AM
+                            in Albrook. Recommended for beginner level.
+                        </p>
+
+                    </div>
+
+                    <div class="group-card-footer">
+
+                        <div class="group-engagement">
+                            <span>♥ 21</span>
+                            <span>💬 5 comments</span>
+                        </div>
+
+                        <button
+                            class="group-share-button"
+                            type="button"
+                            onclick="shareGroup('Padel at Dawn')">
+                            ↗ Share
+                        </button>
+
+                    </div>
+
+                    <div class="group-card-accent"></div>
+
+                </article>
+
+            </div>
+
+
+            <!-- ================= JOIN COMMUNITY ================= -->
+
+            <div class="community-cta">
 
                 <div>
-
-                    <span>
-                        ♥ 32
-                    </span>
-
-                    <span>
-                        💬 8 comments
-                    </span>
-
-                    <span>
-                        ↗ Share
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- ================= GROUP 2 ================= -->
-
-            <article>
-
-                <!-- Group icon -->
-
-                <div>
-                    ● ●
-                </div>
-
-
-                <!-- Group information -->
-
-                <div>
-
-                    <h2>
-                        Padel at Dawn
-                    </h2>
-
+                    <span class="section-label">YOUR NEXT CHAPTER</span>
+                    <h2>Your team is <span>out there.</span></h2>
                     <p>
-                        9 members · Padel
+                        Sign in to get started and discover more ways to play.
                     </p>
-
                 </div>
 
+                <a href="singin.html" class="community-primary-button">
+                    Join PRIME ↗
+                </a>
 
-                <!-- Description -->
+            </div>
 
-                <p>
-                    Recurring group every Tuesday 6:00 AM
-                    in Albrook. Recommended for beginner level.
-                </p>
-
-
-                <!-- Interaction -->
-
-                <div>
-
-                    <span>
-                        ♥ 21
-                    </span>
-
-                    <span>
-                        💬 5 comments
-                    </span>
-
-                    <span>
-                        ↗ Share
-                    </span>
-
-                </div>
-
-            </article>
-
+            <p class="community-note">
+                Group names, member counts and engagement numbers are sample
+                information for this project.
+            </p>
 
         </section>
 
     </main>
 
-</body>
 
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">PRIME<span>.</span></a>
+                <p>Find your game. Find your people. Play more.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="courts.html">Courts</a>
+                <a href="community.html">Community</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 PRIME. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+    <!-- ================= SHARE FUNCTION ================= -->
+
+    <script>
+        function shareGroup(groupName) {
+            const shareData = {
+                title: "PRIME Community",
+                text: "Check out the " + groupName + " group on PRIME!"
+            };
+
+            if (navigator.share) {
+                navigator.share(shareData).catch(function () {});
+            } else if (navigator.clipboard) {
+                navigator.clipboard.writeText(
+                    shareData.text
+                ).then(function () {
+                    alert("Group message copied!");
+                }).catch(function () {
+                    prompt("Copy this message:", shareData.text);
+                });
+            } else {
+                prompt("Copy this message:", shareData.text);
+            }
+        }
+    </script>
+
+</body>
 </html>

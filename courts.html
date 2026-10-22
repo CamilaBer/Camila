@@ -9,265 +9,297 @@
     <link rel="stylesheet" href="Styles.css">
 </head>
 
-<body>
+<body class="courts-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+        <div class="header-content">
+
+            <a href="index.html" class="logo">PRIME<span>.</span></a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="courts.html" class="active">Courts</a>
+                <a href="community.html">Community</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="singin.html" class="header-button">Sign In</a>
+
+        </div>
+    </header>
+
 
     <main>
 
-        <!-- ================= COURTS HEADER ================= -->
+        <!-- ================= COURTS HERO ================= -->
 
-        <section>
+        <section class="courts-hero">
+            <div class="courts-hero-content">
 
-            <h1>
-                BOOK YOUR COURT IN<br>
-                UNDER A MINUTE.
-            </h1>
+                <span class="section-label">FIND YOUR SPACE</span>
 
-            <button>
-                View Interactive Map
-            </button>
+                <h1>
+                    BOOK YOUR COURT IN
+                    <span>UNDER A MINUTE.</span>
+                </h1>
 
+                <p>
+                    Discover sports spaces near you and get ready to play.
+                    Your next game starts here.
+                </p>
+
+                <a href="#available-courts" class="primary-button">
+                    Explore Courts
+                </a>
+
+            </div>
         </section>
 
 
         <!-- ================= FILTER ================= -->
 
-        <section>
+        <section class="courts-section" id="available-courts">
 
-            <button>
-                All Sports
-            </button>
+            <div class="courts-section-heading">
+                <div>
+                    <span class="section-label">YOUR NEXT GAME</span>
+                    <h2>Explore <span>Courts.</span></h2>
+                </div>
+
+                <p>Find a space that matches your sport.</p>
+            </div>
+
+            <div class="court-filters">
+                <button class="filter-button active" type="button">All Sports</button>
+                <button class="filter-button" type="button">Swimming</button>
+                <button class="filter-button" type="button">Volleyball</button>
+                <button class="filter-button" type="button">Football</button>
+                <button class="filter-button" type="button">Basketball</button>
+                <button class="filter-button" type="button">Tennis</button>
+                <button class="filter-button" type="button">Padel</button>
+            </div>
+
+
+            <!-- ================= COURT CARDS ================= -->
+
+            <div class="court-grid">
+
+                <!-- COURT 1 -->
+
+                <article class="court-card">
+
+                    <div class="court-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=900&q=80"
+                            alt="Swimming pool">
+
+                        <span class="court-sport">Swimming</span>
+                    </div>
+
+                    <div class="court-info">
+
+                        <div class="court-rating">★ 4.6</div>
+
+                        <h3>La Chorrera Municipal Pool</h3>
+
+                        <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
+
+                        <div class="court-card-bottom">
+                            <p class="court-price">$25 <span>/ hour</span></p>
+                            <a href="singin.html" class="court-book-button">Book Court ↗</a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURT 2 -->
+
+                <article class="court-card">
+
+                    <div class="court-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=900&q=80"
+                            alt="Volleyball court">
+
+                        <span class="court-sport">Volleyball</span>
+                    </div>
+
+                    <div class="court-info">
+
+                        <div class="court-rating">★ 4.7</div>
+
+                        <h3>La Chorrera Volley Court</h3>
+
+                        <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
+
+                        <div class="court-card-bottom">
+                            <p class="court-price">$40 <span>/ hour</span></p>
+                            <a href="singin.html" class="court-book-button">Book Court ↗</a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURT 3 -->
+
+                <article class="court-card">
+
+                    <div class="court-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=900&q=80"
+                            alt="Football field">
+
+                        <span class="court-sport">Football</span>
+                    </div>
+
+                    <div class="court-info">
+
+                        <div class="court-rating">★ 4.8</div>
+
+                        <h3>La Chorrera Turf Pitch</h3>
+
+                        <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
+
+                        <div class="court-card-bottom">
+                            <p class="court-price">$28 <span>/ hour</span></p>
+                            <a href="singin.html" class="court-book-button">Book Court ↗</a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURT 4 -->
+
+                <article class="court-card">
+
+                    <div class="court-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=80"
+                            alt="Basketball court">
+
+                        <span class="court-sport">Basketball</span>
+                    </div>
+
+                    <div class="court-info">
+
+                        <div class="court-rating">★ 4.7</div>
+
+                        <h3>La Chorrera Basketball Court</h3>
+
+                        <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
+
+                        <div class="court-card-bottom">
+                            <p class="court-price">$30 <span>/ hour</span></p>
+                            <a href="singin.html" class="court-book-button">Book Court ↗</a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURT 5 -->
+
+                <article class="court-card">
+
+                    <div class="court-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=900&q=80"
+                            alt="Tennis court">
+
+                        <span class="court-sport">Tennis</span>
+                    </div>
+
+                    <div class="court-info">
+
+                        <div class="court-rating">★ 4.9</div>
+
+                        <h3>La Chorrera Tennis Court</h3>
+
+                        <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
+
+                        <div class="court-card-bottom">
+                            <p class="court-price">$35 <span>/ hour</span></p>
+                            <a href="singin.html" class="court-book-button">Book Court ↗</a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURT 6 -->
+
+                <article class="court-card">
+
+                    <div class="court-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=900&q=80"
+                            alt="Padel court">
+
+                        <span class="court-sport">Padel</span>
+                    </div>
+
+                    <div class="court-info">
+
+                        <div class="court-rating">★ 4.8</div>
+
+                        <h3>La Chorrera Padel Court</h3>
+
+                        <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
+
+                        <div class="court-card-bottom">
+                            <p class="court-price">$32 <span>/ hour</span></p>
+                            <a href="singin.html" class="court-book-button">Book Court ↗</a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p class="courts-note">
+                *Court names, ratings and prices are sample information for this project.
+            </p>
 
         </section>
-
-
-        <!-- ================= COURTS ================= -->
-
-        <section>
-
-
-            <!-- COURT 1 -->
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=900&q=80"
-                    alt="Swimming pool"
-                >
-
-                <div>
-
-                    <span>★ 4.6</span>
-
-                    <h2>
-                        La Chorrera Municipal Pool
-                    </h2>
-
-                    <p>
-                        La Chorrera, Panama West
-                    </p>
-
-                    <h3>
-                        $25
-                        <small>/ hour</small>
-                    </h3>
-
-                    <button>
-                        Book Court
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- COURT 2 -->
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=900&q=80"
-                    alt="Volleyball court"
-                >
-
-                <div>
-
-                    <span>★ 4.7</span>
-
-                    <h2>
-                        La Chorrera Volley Court
-                    </h2>
-
-                    <p>
-                        La Chorrera, Panama West
-                    </p>
-
-                    <h3>
-                        $40
-                        <small>/ hour</small>
-                    </h3>
-
-                    <button>
-                        Book Court
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- COURT 3 -->
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=900&q=80"
-                    alt="Football field"
-                >
-
-                <div>
-
-                    <span>★ 4.8</span>
-
-                    <h2>
-                        La Chorrera Turf Pitch
-                    </h2>
-
-                    <p>
-                        La Chorrera, Panama West
-                    </p>
-
-                    <h3>
-                        $28
-                        <small>/ hour</small>
-                    </h3>
-
-                    <button>
-                        Book Court
-                    </button>
-
-                </div>
-
-            </article>
-
-
-        </section>
-
-
-        <!-- ================= MORE COURTS ================= -->
-
-        <section>
-
-
-            <!-- COURT 4 -->
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=80"
-                    alt="Basketball court"
-                >
-
-                <div>
-
-                    <span>★ 4.7</span>
-
-                    <h2>
-                        La Chorrera Basketball Court
-                    </h2>
-
-                    <p>
-                        La Chorrera, Panama West
-                    </p>
-
-                    <h3>
-                        $30
-                        <small>/ hour</small>
-                    </h3>
-
-                    <button>
-                        Book Court
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- COURT 5 -->
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=900&q=80"
-                    alt="Tennis court"
-                >
-
-                <div>
-
-                    <span>★ 4.9</span>
-
-                    <h2>
-                        La Chorrera Tennis Court
-                    </h2>
-
-                    <p>
-                        La Chorrera, Panama West
-                    </p>
-
-                    <h3>
-                        $35
-                        <small>/ hour</small>
-                    </h3>
-
-                    <button>
-                        Book Court
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- COURT 6 -->
-
-            <article>
-
-                <img
-                    src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=900&q=80"
-                    alt="Padel court"
-                >
-
-                <div>
-
-                    <span>★ 4.8</span>
-
-                    <h2>
-                        La Chorrera Padel Court
-                    </h2>
-
-                    <p>
-                        La Chorrera, Panama West
-                    </p>
-
-                    <h3>
-                        $32
-                        <small>/ hour</small>
-                    </h3>
-
-                    <button>
-                        Book Court
-                    </button>
-
-                </div>
-
-            </article>
-
-
-        </section>
-
 
     </main>
 
-</body>
 
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">PRIME<span>.</span></a>
+                <p>Find your game. Find your people. Play more.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="courts.html">Courts</a>
+                <a href="community.html">Community</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 PRIME. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>

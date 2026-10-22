@@ -9,140 +9,192 @@
     <link rel="stylesheet" href="Styles.css">
 </head>
 
-<body>
+<body class="profile-page">
+
+    <!-- ================= HEADER ================= -->
+    <header class="profile-header">
+        <a href="index.html" class="profile-logo">PRIME<span>.</span></a>
+
+        <nav class="profile-nav">
+            <a href="index.html">Home</a>
+            <a href="courts.html">Courts</a>
+            <a href="community.html">Community</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="singin.html" class="profile-account-link">
+            SIGN IN <span>↗</span>
+        </a>
+    </header>
 
     <main>
 
-        <!-- PROFILE HEADER -->
+        <!-- ================= HERO ================= -->
+        <section class="profile-hero">
+            <p class="profile-eyebrow"><span></span> YOUR PRIME SPACE</p>
 
-        <section>
-
-            <p>YOUR PROFILE</p>
-
-            <h1>
-                YOUR PROGRESS, ALWAYS IN VIEW.
-            </h1>
+            <h1>YOUR PROGRESS,<br><span>ALWAYS IN VIEW.</span></h1>
 
             <p>
-                A personal dashboard with your favorite sports,
-                stats, and upcoming matches, ready as soon as you log in.
+                Your sports life, all in one place. Track your activity,
+                celebrate your progress, and get ready for your next match.
             </p>
 
+            <a href="#profile-dashboard" class="profile-hero-link">
+                EXPLORE YOUR DASHBOARD <span>↓</span>
+            </a>
         </section>
 
+        <!-- ================= DASHBOARD ================= -->
+        <section class="profile-dashboard" id="profile-dashboard">
 
-        <!-- PROFILE INFORMATION -->
-
-        <section>
-
-            <div>
-
+            <div class="profile-section-heading">
                 <div>
-                    JR
+                    <p class="profile-eyebrow">YOUR DASHBOARD</p>
+                    <h2>THE PLAYER <span>ZONE.</span></h2>
                 </div>
 
-                <div>
-                    <h2>Julia Reyes</h2>
+                <span class="profile-demo-label">DEMO PROFILE</span>
+            </div>
 
-                    <p>
-                        Panama City · Intermediate level
-                    </p>
+            <!-- PLAYER CARD -->
+            <div class="profile-player-card">
+
+                <div class="profile-player-main">
+                    <div class="profile-avatar">JR</div>
+
+                    <div class="profile-player-details">
+                        <p class="profile-card-tag">ATHLETE PROFILE</p>
+                        <h2>Julia Reyes</h2>
+                        <p class="profile-player-location">
+                            <span>⌖</span> Panama City
+                            <span class="profile-dot">·</span>
+                            Intermediate level
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-player-status">
+                    <span class="profile-status-dot"></span>
+                    ACTIVE PLAYER
+                </div>
+
+                <div class="profile-sports">
+                    <p class="profile-card-tag">YOUR SPORTS</p>
+
+                    <div class="profile-sport-tags">
+                        <span>⚽ Soccer 5-a-side</span>
+                        <span>🎾 Padel</span>
+                        <span>🏃 Running</span>
+                    </div>
                 </div>
 
             </div>
-
-
-            <!-- SPORTS -->
-
-            <div>
-
-                <span>Soccer 5-a-side</span>
-
-                <span>Padel</span>
-
-                <span>Running</span>
-
-            </div>
-
 
             <!-- STATISTICS -->
+            <div class="profile-stats-grid">
 
-            <div>
-
-                <div>
+                <article class="profile-stat-card">
+                    <span class="profile-stat-icon">↗</span>
+                    <p>MATCHES PLAYED</p>
                     <strong>42</strong>
-                    <span>MATCHES</span>
-                </div>
+                    <span class="profile-stat-note">Your game, your progress.</span>
+                </article>
 
-                <div>
+                <article class="profile-stat-card">
+                    <span class="profile-stat-icon">✳</span>
+                    <p>WORKOUTS</p>
                     <strong>19</strong>
-                    <span>WORKOUTS</span>
+                    <span class="profile-stat-note">Every session counts.</span>
+                </article>
+
+                <article class="profile-stat-card">
+                    <span class="profile-stat-icon">★</span>
+                    <p>ACHIEVEMENTS</p>
+                    <strong>7</strong>
+                    <span class="profile-stat-note">Keep reaching higher.</span>
+                </article>
+
+            </div>
+
+            <!-- ================= UPCOMING EVENTS ================= -->
+            <div class="profile-upcoming-section">
+
+                <div class="profile-section-heading">
+                    <div>
+                        <p class="profile-eyebrow">SAVE THE DATE</p>
+                        <h2>UP NEXT<span>.</span></h2>
+                    </div>
+
+                    <a href="courts.html" class="profile-view-link">
+                        EXPLORE COURTS <span>↗</span>
+                    </a>
                 </div>
 
-                <div>
-                    <strong>7</strong>
-                    <span>ACHIEVEMENTS</span>
+                <div class="profile-events">
+
+                    <article class="profile-event-card">
+                        <div class="profile-event-date">
+                            <strong>18</strong>
+                            <span>JUL</span>
+                        </div>
+
+                        <div class="profile-event-info">
+                            <span class="profile-event-category">SOCCER · TEAM MATCH</span>
+                            <h3>Soccer 5 — Los Halcones</h3>
+                            <p>Estadio Agustín "Muquita" Sánchez</p>
+                            <span class="profile-event-time">◷ 7:00 PM</span>
+                        </div>
+
+                        <div class="profile-event-arrow">↗</div>
+                    </article>
+
+                    <article class="profile-event-card">
+                        <div class="profile-event-date">
+                            <strong>21</strong>
+                            <span>JUL</span>
+                        </div>
+
+                        <div class="profile-event-info">
+                            <span class="profile-event-category">PADEL · COACHING</span>
+                            <h3>Coaching Session — Padel</h3>
+                            <p>Complejo Deportivo de La Feria de La Chorrera</p>
+                            <span class="profile-event-time">◷ 6:30 AM</span>
+                        </div>
+
+                        <div class="profile-event-arrow">↗</div>
+                    </article>
+
                 </div>
+
+                <p class="profile-demo-note">
+                    Sample profile information for demonstration purposes.
+                    Match dates and statistics are illustrative.
+                </p>
 
             </div>
 
         </section>
 
+        <!-- ================= BOTTOM CTA ================= -->
+        <section class="profile-bottom-cta">
+            <p class="profile-eyebrow">YOUR NEXT CHALLENGE AWAITS</p>
+            <h2>DON'T JUST WATCH.<br><span>GET IN THE GAME.</span></h2>
 
-        <!-- UPCOMING MATCHES -->
-
-        <section>
-
-            <p>UPCOMING MATCHES</p>
-
-
-            <article>
-
-                <div>
-                    <strong>18</strong>
-                    <span>JUL</span>
-                </div>
-
-                <div>
-
-                    <h3>
-                        Soccer 5 — Los Halcones
-                    </h3>
-
-                    <p>
-                        Estadio Agustín "Muquita" Sánchez · 7:00 PM
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <div>
-                    <strong>21</strong>
-                    <span>JUL</span>
-                </div>
-
-                <div>
-
-                    <h3>
-                        Coaching session — Padel
-                    </h3>
-
-                    <p>
-                        Complejo Deportivo de La Feria de La Chorrera · 6:30 AM
-                    </p>
-
-                </div>
-
-            </article>
-
+            <a href="courts.html" class="profile-cta-button">
+                FIND YOUR NEXT COURT <span>↗</span>
+            </a>
         </section>
 
     </main>
 
-</body>
+    <!-- ================= FOOTER ================= -->
+    <footer class="profile-footer">
+        <a href="index.html" class="profile-logo">PRIME<span>.</span></a>
+        <p>Built for the love of the game.</p>
+        <p class="profile-footer-copy">© 2026 PRIME. ALL RIGHTS RESERVED.</p>
+    </footer>
 
+</body>
 </html>
