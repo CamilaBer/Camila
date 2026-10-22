@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,15 +8,19 @@
 
     <title>PRIME - Courts</title>
     <link rel="stylesheet" href="Styles.css">
+
+    <!-- Leaflet: librería del mapa interactivo -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+    >
 </head>
 
 <body class="courts-page">
 
-    <!-- ================= HEADER ================= -->
-
+    <!-- HEADER -->
     <header class="site-header">
         <div class="header-content">
-
             <a href="index.html" class="logo">PRIME<span>.</span></a>
 
             <nav class="main-nav">
@@ -27,18 +32,14 @@
             </nav>
 
             <a href="singin.html" class="header-button">Sign In</a>
-
         </div>
     </header>
 
-
     <main>
 
-        <!-- ================= COURTS HERO ================= -->
-
+        <!-- HERO -->
         <section class="courts-hero">
             <div class="courts-hero-content">
-
                 <span class="section-label">FIND YOUR SPACE</span>
 
                 <h1>
@@ -54,13 +55,10 @@
                 <a href="#available-courts" class="primary-button">
                     Explore Courts
                 </a>
-
             </div>
         </section>
 
-
-        <!-- ================= FILTER ================= -->
-
+        <!-- COURTS AND FILTERS -->
         <section class="courts-section" id="available-courts">
 
             <div class="courts-section-heading">
@@ -72,216 +70,208 @@
                 <p>Find a space that matches your sport.</p>
             </div>
 
-            <div class="court-filters">
-                <button class="filter-button active" type="button">All Sports</button>
-                <button class="filter-button" type="button">Swimming</button>
-                <button class="filter-button" type="button">Volleyball</button>
-                <button class="filter-button" type="button">Football</button>
-                <button class="filter-button" type="button">Basketball</button>
-                <button class="filter-button" type="button">Tennis</button>
-                <button class="filter-button" type="button">Padel</button>
+            <div class="court-filters" id="prime-court-filters">
+                <button class="filter-button active" type="button"
+                    data-filter="all" aria-pressed="true">All Sports</button>
+
+                <button class="filter-button" type="button"
+                    data-filter="swimming" aria-pressed="false">Swimming</button>
+
+                <button class="filter-button" type="button"
+                    data-filter="volleyball" aria-pressed="false">Volleyball</button>
+
+                <button class="filter-button" type="button"
+                    data-filter="football" aria-pressed="false">Football</button>
+
+                <button class="filter-button" type="button"
+                    data-filter="basketball" aria-pressed="false">Basketball</button>
+
+                <button class="filter-button" type="button"
+                    data-filter="tennis" aria-pressed="false">Tennis</button>
+
+                <button class="filter-button" type="button"
+                    data-filter="padel" aria-pressed="false">Padel</button>
             </div>
 
+            <!-- EXISTING COURT CARDS -->
+            <div class="court-grid" id="prime-court-grid">
 
-            <!-- ================= COURT CARDS ================= -->
-
-            <div class="court-grid">
-
-                <!-- COURT 1 -->
-
-                <article class="court-card">
-
+                <article class="court-card" data-sport="swimming" data-court-id="0">
                     <div class="court-image">
                         <img
                             src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=900&q=80"
                             alt="Swimming pool">
-
                         <span class="court-sport">Swimming</span>
                     </div>
 
                     <div class="court-info">
-
                         <div class="court-rating">★ 4.6</div>
-
                         <h3>La Chorrera Municipal Pool</h3>
-
                         <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
 
                         <div class="court-card-bottom">
                             <p class="court-price">$25 <span>/ hour</span></p>
                             <a href="singin.html" class="court-book-button">Book Court ↗</a>
                         </div>
-
                     </div>
-
                 </article>
 
-
-                <!-- COURT 2 -->
-
-                <article class="court-card">
-
+                <article class="court-card" data-sport="volleyball" data-court-id="1">
                     <div class="court-image">
                         <img
                             src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=900&q=80"
                             alt="Volleyball court">
-
                         <span class="court-sport">Volleyball</span>
                     </div>
 
                     <div class="court-info">
-
                         <div class="court-rating">★ 4.7</div>
-
                         <h3>La Chorrera Volley Court</h3>
-
                         <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
 
                         <div class="court-card-bottom">
                             <p class="court-price">$40 <span>/ hour</span></p>
                             <a href="singin.html" class="court-book-button">Book Court ↗</a>
                         </div>
-
                     </div>
-
                 </article>
 
-
-                <!-- COURT 3 -->
-
-                <article class="court-card">
-
+                <article class="court-card" data-sport="football" data-court-id="2">
                     <div class="court-image">
                         <img
                             src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=900&q=80"
                             alt="Football field">
-
                         <span class="court-sport">Football</span>
                     </div>
 
                     <div class="court-info">
-
                         <div class="court-rating">★ 4.8</div>
-
                         <h3>La Chorrera Turf Pitch</h3>
-
                         <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
 
                         <div class="court-card-bottom">
                             <p class="court-price">$28 <span>/ hour</span></p>
                             <a href="singin.html" class="court-book-button">Book Court ↗</a>
                         </div>
-
                     </div>
-
                 </article>
 
-
-                <!-- COURT 4 -->
-
-                <article class="court-card">
-
+                <article class="court-card" data-sport="basketball" data-court-id="3">
                     <div class="court-image">
                         <img
                             src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=80"
                             alt="Basketball court">
-
                         <span class="court-sport">Basketball</span>
                     </div>
 
                     <div class="court-info">
-
                         <div class="court-rating">★ 4.7</div>
-
                         <h3>La Chorrera Basketball Court</h3>
-
                         <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
 
                         <div class="court-card-bottom">
                             <p class="court-price">$30 <span>/ hour</span></p>
                             <a href="singin.html" class="court-book-button">Book Court ↗</a>
                         </div>
-
                     </div>
-
                 </article>
 
-
-                <!-- COURT 5 -->
-
-                <article class="court-card">
-
+                <article class="court-card" data-sport="tennis" data-court-id="4">
                     <div class="court-image">
                         <img
                             src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=900&q=80"
                             alt="Tennis court">
-
                         <span class="court-sport">Tennis</span>
                     </div>
 
                     <div class="court-info">
-
                         <div class="court-rating">★ 4.9</div>
-
                         <h3>La Chorrera Tennis Court</h3>
-
                         <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
 
                         <div class="court-card-bottom">
                             <p class="court-price">$35 <span>/ hour</span></p>
                             <a href="singin.html" class="court-book-button">Book Court ↗</a>
                         </div>
-
                     </div>
-
                 </article>
 
-
-                <!-- COURT 6 -->
-
-                <article class="court-card">
-
+                <article class="court-card" data-sport="padel" data-court-id="5">
                     <div class="court-image">
                         <img
                             src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=900&q=80"
                             alt="Padel court">
-
                         <span class="court-sport">Padel</span>
                     </div>
 
                     <div class="court-info">
-
                         <div class="court-rating">★ 4.8</div>
-
                         <h3>La Chorrera Padel Court</h3>
-
                         <p class="court-location">⌖ La Chorrera, Panama Oeste</p>
 
                         <div class="court-card-bottom">
                             <p class="court-price">$32 <span>/ hour</span></p>
                             <a href="singin.html" class="court-book-button">Book Court ↗</a>
                         </div>
-
                     </div>
-
                 </article>
 
             </div>
 
             <p class="courts-note">
-                *Court names, ratings and prices are sample information for this project.
+                *Court names, ratings, prices and map pins are demonstration data.
+                Confirm real locations and prices before publishing.
             </p>
+        </section>
 
+        <!-- INTERACTIVE MAP -->
+        <section class="prime-map-section" id="prime-interactive-map">
+
+            <div class="prime-map-heading">
+                <span class="section-label">EXPLORE YOUR AREA</span>
+                <h2>Find your next <span>game.</span></h2>
+                <p>
+                    Explore the map, search for a place, or select a court above
+                    to view its demonstration map pin.
+                </p>
+            </div>
+
+            <div class="prime-map-panel">
+
+                <form class="prime-map-toolbar" id="prime-map-search-form">
+                    <label class="prime-map-sr-only" for="prime-map-search">
+                        Search for a place or address
+                    </label>
+
+                    <input
+                        type="search"
+                        id="prime-map-search"
+                        placeholder="Search a place or address..."
+                        autocomplete="off">
+
+                    <button type="submit">Search</button>
+                    <button type="button" id="prime-map-location">📍 My location</button>
+                    <button type="button" id="prime-map-all">Show courts</button>
+                </form>
+
+                <div id="prime-map" role="application"
+                    aria-label="Interactive map showing demonstration court markers"></div>
+
+                <p class="prime-map-status" id="prime-map-status" aria-live="polite">
+                    Map pins are illustrative and have not been verified.
+                </p>
+            </div>
+
+            <p class="prime-map-attribution">
+                Map data © OpenStreetMap contributors. Search provided by OpenStreetMap Nominatim.
+            </p>
         </section>
 
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-content">
-
             <div class="footer-brand">
                 <a href="index.html" class="logo">PRIME<span>.</span></a>
                 <p>Find your game. Find your people. Play more.</p>
@@ -293,13 +283,321 @@
                 <a href="community.html">Community</a>
                 <a href="contact.html">Contact</a>
             </div>
-
         </div>
 
         <div class="footer-bottom">
             <p>© 2026 PRIME. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Leaflet must load before the map script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+    <script>
+    (function () {
+        "use strict";
+
+        const filterButtons = Array.from(
+            document.querySelectorAll("#prime-court-filters [data-filter]")
+        );
+
+        const courtCards = Array.from(
+            document.querySelectorAll("#prime-court-grid [data-court-id]")
+        );
+
+        const mapElement = document.getElementById("prime-map");
+        const statusElement = document.getElementById("prime-map-status");
+        const searchInput = document.getElementById("prime-map-search");
+        const searchForm = document.getElementById("prime-map-search-form");
+        const locationButton = document.getElementById("prime-map-location");
+        const allButton = document.getElementById("prime-map-all");
+        const mapSection = document.getElementById("prime-interactive-map");
+
+        if (!window.L || !mapElement) {
+            statusElement.textContent =
+                "The map could not load. Check your internet connection and try again.";
+            return;
+        }
+
+        /*
+          DEMONSTRATION DATA ONLY:
+          These coordinates are approximate sample pins around La Chorrera.
+          They are NOT verified addresses or confirmed sports facilities.
+          Replace them with confirmed coordinates before publishing.
+        */
+        const courts = [
+            {
+                id: 0, sport: "swimming",
+                name: "La Chorrera Municipal Pool",
+                label: "Swimming", price: "$25/hour",
+                lat: 8.8806, lng: -79.7826
+            },
+            {
+                id: 1, sport: "volleyball",
+                name: "La Chorrera Volley Court",
+                label: "Volleyball", price: "$40/hour",
+                lat: 8.8745, lng: -79.7769
+            },
+            {
+                id: 2, sport: "football",
+                name: "La Chorrera Turf Pitch",
+                label: "Football", price: "$28/hour",
+                lat: 8.8868, lng: -79.7885
+            },
+            {
+                id: 3, sport: "basketball",
+                name: "La Chorrera Basketball Court",
+                label: "Basketball", price: "$30/hour",
+                lat: 8.8830, lng: -79.7750
+            },
+            {
+                id: 4, sport: "tennis",
+                name: "La Chorrera Tennis Court",
+                label: "Tennis", price: "$35/hour",
+                lat: 8.8770, lng: -79.7900
+            },
+            {
+                id: 5, sport: "padel",
+                name: "La Chorrera Padel Court",
+                label: "Padel", price: "$32/hour",
+                lat: 8.8705, lng: -79.7850
+            }
+        ];
+
+        const map = L.map("prime-map").setView([8.8806, -79.7826], 13);
+
+        const streetLayer = L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            {
+                maxZoom: 19,
+                attribution: "&copy; OpenStreetMap contributors"
+            }
+        ).addTo(map);
+
+        const satelliteLayer = L.tileLayer(
+            "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            {
+                maxZoom: 19,
+                attribution: "Tiles &copy; Esri"
+            }
+        );
+
+        L.control.layers({
+            "Street map": streetLayer,
+            "Satellite": satelliteLayer
+        }).addTo(map);
+
+        L.control.scale().addTo(map);
+
+        const markerLayer = L.layerGroup().addTo(map);
+        const markerById = new Map();
+        let activeFilter = "all";
+        let userMarker = null;
+
+        function setStatus(message) {
+            statusElement.textContent = message;
+        }
+
+        function updateFilters(filter) {
+            activeFilter = filter;
+
+            filterButtons.forEach(function (button) {
+                const active = button.dataset.filter === filter;
+                button.classList.toggle("active", active);
+                button.setAttribute("aria-pressed", String(active));
+            });
+
+            courtCards.forEach(function (card) {
+                const show = filter === "all" || card.dataset.sport === filter;
+                card.hidden = !show;
+            });
+
+            renderMarkers();
+
+            const visibleCount = courts.filter(function (court) {
+                return filter === "all" || court.sport === filter;
+            }).length;
+
+            setStatus(
+                visibleCount + " demonstration map pin(s) shown. " +
+                "Locations and facility details are not verified."
+            );
+        }
+
+        function renderMarkers() {
+            markerLayer.clearLayers();
+            markerById.clear();
+
+            courts.forEach(function (court) {
+                if (activeFilter !== "all" && court.sport !== activeFilter) {
+                    return;
+                }
+
+                const marker = L.marker([court.lat, court.lng]);
+
+                marker.bindPopup(
+                    "<strong>" + court.name + "</strong>" +
+                    "<br>" + court.label +
+                    "<br>" + court.price +
+                    "<br><small>Sample listing — location not verified.</small>" +
+                    '<br><a href="singin.html">Continue to Sign In</a>' +
+                    '<br><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=' +
+                    court.lat + "," + court.lng + '">Get directions</a>'
+                );
+
+                marker.addTo(markerLayer);
+                markerById.set(court.id, marker);
+            });
+        }
+
+        function focusCourt(id) {
+            const court = courts.find(function (item) {
+                return item.id === id;
+            });
+
+            if (!court) return;
+
+            if (activeFilter !== "all" && activeFilter !== court.sport) {
+                updateFilters(court.sport);
+            }
+
+            mapSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+            window.setTimeout(function () {
+                map.invalidateSize();
+                map.flyTo([court.lat, court.lng], 16);
+
+                window.setTimeout(function () {
+                    const marker = markerById.get(id);
+                    if (marker) marker.openPopup();
+                }, 450);
+            }, 300);
+        }
+
+        filterButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                updateFilters(button.dataset.filter);
+            });
+        });
+
+        courtCards.forEach(function (card) {
+            card.addEventListener("click", function (event) {
+                if (event.target.closest("a")) return;
+                focusCourt(Number(card.dataset.courtId));
+            });
+
+            card.setAttribute("tabindex", "0");
+            card.setAttribute("role", "button");
+            card.setAttribute("aria-label", "Show " +
+                card.querySelector("h3").textContent + " on the map");
+
+            card.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    focusCourt(Number(card.dataset.courtId));
+                }
+            });
+        });
+
+        searchForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const query = searchInput.value.trim();
+
+            if (!query) {
+                setStatus("Enter a place or address to search.");
+                searchInput.focus();
+                return;
+            }
+
+            setStatus("Searching for " + query + "...");
+
+            try {
+                const url = "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
+                    encodeURIComponent(query + ", Panama");
+
+                const response = await fetch(url);
+
+                if (!response.ok) throw new Error("Search request failed");
+
+                const results = await response.json();
+
+                if (!results.length) {
+                    setStatus("No results found. Try another place or address.");
+                    return;
+                }
+
+                const result = results[0];
+                map.flyTo([Number(result.lat), Number(result.lon)], 15);
+
+                setStatus("Search result: " + result.display_name);
+            } catch (error) {
+                setStatus(
+                    "Search is temporarily unavailable. You can still explore the map."
+                );
+            }
+        });
+
+        locationButton.addEventListener("click", function () {
+            if (!navigator.geolocation) {
+                setStatus("Your browser does not support location sharing.");
+                return;
+            }
+
+            setStatus("Waiting for location permission...");
+
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+
+                    if (userMarker) map.removeLayer(userMarker);
+
+                    userMarker = L.circleMarker([lat, lng], {
+                        radius: 9,
+                        color: "#ffffff",
+                        weight: 3,
+                        fillColor: "#1877f2",
+                        fillOpacity: 1
+                    }).addTo(map).bindPopup("Your current location");
+
+                    map.flyTo([lat, lng], 15);
+                    userMarker.openPopup();
+
+                    setStatus("Your location is shown on the map.");
+                },
+                function () {
+                    setStatus(
+                        "Location unavailable or permission denied. You can search for a place instead."
+                    );
+                },
+                { enableHighAccuracy: true, timeout: 10000 }
+            );
+        });
+
+        allButton.addEventListener("click", function () {
+            updateFilters("all");
+
+            const bounds = L.latLngBounds(
+                courts.map(function (court) {
+                    return [court.lat, court.lng];
+                })
+            );
+
+            map.fitBounds(bounds, { padding: [35, 35], maxZoom: 14 });
+        });
+
+        renderMarkers();
+
+        /*
+          Leaflet needs a size refresh after the page and layout have loaded.
+        */
+        window.setTimeout(function () {
+            map.invalidateSize();
+        }, 250);
+
+    })();
+    </script>
 
 </body>
 </html>
