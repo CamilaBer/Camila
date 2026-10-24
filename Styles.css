@@ -5564,3 +5564,58 @@ body.home > header > .signin-button {
         padding: 10px 16px;
     }
 }
+
+
+/* FIX: COURTS HERO TITLE COLORS */
+.courts-hero h1 {
+    color: #ffffff;
+}
+
+.courts-hero h1 span {
+    color: #ff5a00;
+}
+
+/* EXPLORE COURTS TITLE */
+.courts-section-heading h2 {
+    color: #ffffff;
+}
+
+.courts-section-heading h2 span {
+    color: #ff5a00;
+}
+
+/* PRIME MAP HEADING COLORS */
+.prime-map-heading h2 {
+    color: #ffffff;
+}
+
+.prime-map-heading h2 span {
+    color: #ff5a00;
+}
+
+/* BLOG - LEVEL UP YOUR GAME */
+.blog-hero h1 {
+    color: #ffffff;
+}
+
+.blog-hero h1 span {
+    color: #ff5a00;
+}
+
+/* BLOG SECTION HEADING COLORS */
+.blog-section-heading h2 {
+    color: #ffffff;
+}
+
+.blog-section-heading h2 span {
+    color: #ff5a00;
+}
+
+/* BLOG CTA - KEEP MOVING COLORS */
+.blog-cta h2 {
+    color: #ffffff;
+}
+
+.blog-cta h2 span {
+    color: #ff5a00;
+}
