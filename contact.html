@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,296 +6,660 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PRIME - Community</title>
+    <title>PRIME - Contact</title>
     <link rel="stylesheet" href="Styles.css">
+
+    <style>
+        /* ================= CONTACT PAGE ================= */
+
+        .contact-page {
+            background: #080808;
+            color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .contact-page .contact-hero {
+            padding: 100px 8% 65px;
+        }
+
+        .contact-page .section-label {
+            color: #ff5a00;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .contact-page .contact-hero h1 {
+            font-size: clamp(55px, 9vw, 115px);
+            line-height: 0.95;
+            margin: 25px 0;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .contact-page .contact-hero h1 span {
+            color: #ff5a00;
+        }
+
+        .contact-page .contact-hero p {
+            color: #b7b7b7;
+            max-width: 550px;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .contact-page .contact-container {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 70px;
+            padding: 40px 8% 110px;
+        }
+
+        .contact-page .contact-info h2,
+        .contact-page .contact-form-wrapper h2 {
+            font-size: 30px;
+            color: #fff;
+            margin: 15px 0;
+        }
+
+        .contact-page .contact-info > p {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .contact-page .contact-detail {
+            margin-bottom: 28px;
+        }
+
+        .contact-page .contact-detail h3 {
+            font-size: 12px;
+            color: #ff5a00;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .contact-page .contact-detail a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .contact-page .contact-detail a:hover {
+            color: #ff5a00;
+        }
+
+        .contact-page .contact-form-wrapper {
+            background: #141414;
+            border: 1px solid #292929;
+            padding: 38px;
+            border-radius: 12px;
+        }
+
+        .contact-page .contact-form-wrapper > p {
+            color: #aaa;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .contact-page .form-group {
+            margin-bottom: 22px;
+        }
+
+        .contact-page .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            color: #eee;
+        }
+
+        .contact-page .form-group input,
+        .contact-page .form-group select,
+        .contact-page .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: #0b0b0b;
+            border: 1px solid #333;
+            border-radius: 5px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        .contact-page .form-group input:focus,
+        .contact-page .form-group select:focus,
+        .contact-page .form-group textarea:focus {
+            border-color: #ff5a00;
+        }
+
+        .contact-page .form-group input::placeholder,
+        .contact-page .form-group textarea::placeholder {
+            color: #777;
+        }
+
+        .contact-page .form-group select option {
+            background: #141414;
+            color: #fff;
+        }
+
+        .contact-page .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-page .send-button {
+            width: 100%;
+            padding: 17px;
+            background: #ff5a00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .contact-page .send-button:hover {
+            background: #ff762b;
+            transform: translateY(-2px);
+        }
+
+        /* ================= FAQ ================= */
+
+        .contact-page .faq-section {
+            padding: 90px 8%;
+            background: #111;
+        }
+
+        .contact-page .faq-heading {
+            max-width: 650px;
+            margin-bottom: 45px;
+        }
+
+        .contact-page .faq-heading h2 {
+            font-size: clamp(35px, 5vw, 55px);
+            color: #fff;
+            margin: 20px 0;
+        }
+
+        .contact-page .faq-heading p {
+            color: #aaa;
+            line-height: 1.8;
+        }
+
+        .contact-page .faq-list {
+            max-width: 850px;
+        }
+
+        .contact-page .faq-item {
+            border-bottom: 1px solid #333;
+        }
+
+        .contact-page .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            padding: 25px 0;
+            background: transparent;
+            border: none;
+            color: #fff;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .contact-page .faq-question span {
+            color: #ff5a00;
+            font-size: 24px;
+        }
+
+        .contact-page .faq-answer {
+            display: none;
+            color: #aaa;
+            line-height: 1.8;
+            padding: 0 0 25px;
+        }
+
+        .contact-page .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ================= CTA ================= */
+
+        .contact-page .contact-cta {
+            padding: 100px 8%;
+            text-align: center;
+            background: #080808;
+        }
+
+        .contact-page .contact-cta h2 {
+            font-size: clamp(35px, 6vw, 65px);
+            line-height: 1.1;
+            color: #fff;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .contact-page .contact-cta p {
+            color: #aaa;
+            line-height: 1.8;
+            max-width: 550px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-page .cta-button {
+            display: inline-block;
+            padding: 16px 30px;
+            background: #ff5a00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            transition: background 0.2s;
+        }
+
+        .contact-page .cta-button:hover {
+            background: #ff762b;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 800px) {
+            .contact-page .contact-hero {
+                padding: 75px 6% 40px;
+            }
+
+            .contact-page .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 30px 6% 75px;
+            }
+
+            .contact-page .contact-form-wrapper {
+                padding: 25px;
+            }
+
+            .contact-page .faq-section,
+            .contact-page .contact-cta {
+                padding: 70px 6%;
+            }
+        }
+    </style>
 </head>
 
-<body class="community-page">
+<body class="contact-page">
 
     <!-- ================= HEADER ================= -->
 
-    <header class="site-header">
-        <div class="header-content">
+    <header>
+        <a href="index.html" class="logo">
+            PRIME<span></span>
+        </a>
 
-            <a href="index.html" class="logo">PRIME<span></span></a>
-
-            <nav class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="courts.html">Courts</a>
-                <a href="community.html" class="active">Community</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-
-            <a href="singin.html" class="header-button">Sign In</a>
-
-        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courts.html">Courts</a>
+            <a href="community.html">Community</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
-
 
     <main>
 
-        <!-- ================= COMMUNITY HERO ================= -->
+        <!-- ================= HERO ================= -->
 
-        <section class="community-hero">
+        <section class="contact-hero">
 
-            <div class="community-hero-content">
+            <span class="section-label">— CONTACT</span>
 
-                <span class="section-label">MORE THAN A GAME</span>
+            <h1>
+                LET'S<br>
+                TALK
+            </h1>
 
-                <h1>
-                    FIND YOUR
-                    <span>NEXT TEAM.</span>
-                </h1>
+            <p>
+                Have a question, an idea, or want to be part of
+                the PRIME community? We would love to hear from you.
+                Let's make sports more accessible, together.
+            </p>
+
+        </section>
+
+        <!-- ================= CONTACT FORM ================= -->
+
+        <section class="contact-container">
+
+            <div class="contact-info">
+
+                <span class="section-label">GET IN TOUCH</span>
+
+                <h2>We are here to help.</h2>
 
                 <p>
-                    Create groups, organize matches, and share your progress
-                    with people who train like you. Find your people and
-                    make every game count.
+                    Whether you are an athlete, coach, or court owner,
+                    PRIME is ready to connect with you. Send us a message
+                    and tell us what you need.
                 </p>
 
-                <a href="#community-groups" class="community-primary-button">
-                    Explore Community ↗
-                </a>
+                <div class="contact-detail">
+                    <h3>EMAIL US</h3>
+                    <a href="mailto:hello@prime.app">
+                        ✉ hello@prime.app
+                    </a>
+                </div>
 
-                <div class="community-stats">
+                <div class="contact-detail">
+                    <h3>CALL US</h3>
+                    <a href="tel:+50760000000">
+                        ☎ +507 6000-0000
+                    </a>
+                </div>
 
-                    <div>
-                        <strong>YOUR</strong>
-                        <span>Sports community</span>
-                    </div>
-
-                    <div>
-                        <strong>YOUR</strong>
-                        <span>Next match</span>
-                    </div>
-
-                    <div>
-                        <strong>YOUR</strong>
-                        <span>Team spirit</span>
-                    </div>
-
+                <div class="contact-detail">
+                    <h3>OUR MISSION</h3>
+                    <p>
+                        Connecting athletes, discovering courts,
+                        and making every game count.
+                    </p>
                 </div>
 
             </div>
 
-            <div class="community-hero-visual">
-                <div class="community-visual-card">
+            <div class="contact-form-wrapper">
 
-                    <span class="community-visual-label">THE NEXT GAME STARTS HERE</span>
+                <span class="section-label">SEND A MESSAGE</span>
 
-                    <div class="community-orbit">
-                        <div class="community-orbit-center">P<span>.</span></div>
-                        <span class="orbit-dot orbit-dot-one">⚽</span>
-                        <span class="orbit-dot orbit-dot-two">🏀</span>
-                        <span class="orbit-dot orbit-dot-three">🎾</span>
+                <h2>Let's make it happen.</h2>
+
+                <p>
+                    Fill out the form below and tell us how we can help.
+                </p>
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <label for="name">NAME</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your full name"
+                            required
+                        >
                     </div>
 
-                    <h2>PLAY TOGETHER.</h2>
-                    <p>Connect. Compete. Improve.</p>
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="youremail@example.com"
+                            required
+                        >
+                    </div>
 
-                </div>
+                    <div class="form-group">
+                        <label for="topic">WHAT IS IT ABOUT?</label>
+
+                        <select id="topic" name="topic" required>
+                            <option value="" disabled selected>
+                                Select a topic
+                            </option>
+                            <option value="Booking a court">
+                                Booking a court
+                            </option>
+                            <option value="Coaching">
+                                Coaching
+                            </option>
+                            <option value="Partnership">
+                                Partnership
+                            </option>
+                            <option value="Technical support">
+                                Technical support
+                            </option>
+                            <option value="Other">
+                                Other
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">MESSAGE</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us how we can help..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="send-button">
+                        SEND MESSAGE ↗
+                    </button>
+
+                </form>
+
             </div>
 
         </section>
 
+        <!-- ================= FAQ ================= -->
 
-        <!-- ================= COMMUNITY GROUPS ================= -->
+        <section class="faq-section">
 
-        <section class="community-groups-section" id="community-groups">
+            <div class="faq-heading">
 
-            <div class="community-section-heading">
+                <span class="section-label">GOT QUESTIONS?</span>
 
-                <div>
-                    <span class="section-label">MEET YOUR PEOPLE</span>
-                    <h2>Find your <span>crew.</span></h2>
-                </div>
+                <h2>Frequently asked questions.</h2>
 
                 <p>
-                    Join a group, meet new teammates, and find your next game.
+                    Here are some answers to questions you might
+                    have about using PRIME.
                 </p>
 
             </div>
 
+            <div class="faq-list">
 
-            <div class="community-group-grid">
+                <div class="faq-item active">
 
-                <!-- ================= GROUP 1 ================= -->
+                    <button
+                        class="faq-question"
+                        type="button"
+                        aria-expanded="true"
+                    >
+                        How do I book a court?
+                        <span>−</span>
+                    </button>
 
-                <article class="community-group-card">
-
-                    <div class="group-card-top">
-
-                        <div class="group-avatar soccer-avatar">
-                            ⚽
-                        </div>
-
-                        <span class="group-category">SOCCER</span>
-
+                    <div class="faq-answer">
+                        Browse the available courts on our Courts page,
+                        explore the options, and follow the booking
+                        instructions provided for your selected location.
                     </div>
 
-                    <div class="group-details">
-
-                        <h3>Los Halcones FC</h3>
-
-                        <p class="group-members">👥 14 members · Soccer 5</p>
-
-                        <p class="group-description">
-                            Looking for 2 players for Saturday's match
-                            in Costa del Este. Intermediate level.
-                        </p>
-
-                    </div>
-
-                    <div class="group-card-footer">
-
-                        <div class="group-engagement">
-                            <span>♥ 32</span>
-                            <span>💬 8 comments</span>
-                        </div>
-
-                        <button
-                            class="group-share-button"
-                            type="button"
-                            onclick="shareGroup('Los Halcones FC')">
-                            ↗ Share
-                        </button>
-
-                    </div>
-
-                    <div class="group-card-accent"></div>
-
-                </article>
-
-
-                <!-- ================= GROUP 2 ================= -->
-
-                <article class="community-group-card">
-
-                    <div class="group-card-top">
-
-                        <div class="group-avatar padel-avatar">
-                            🎾
-                        </div>
-
-                        <span class="group-category">PADEL</span>
-
-                    </div>
-
-                    <div class="group-details">
-
-                        <h3>Padel at Dawn</h3>
-
-                        <p class="group-members">👥 9 members · Padel</p>
-
-                        <p class="group-description">
-                            Recurring group every Tuesday at 6:00 AM
-                            in Albrook. Recommended for beginner level.
-                        </p>
-
-                    </div>
-
-                    <div class="group-card-footer">
-
-                        <div class="group-engagement">
-                            <span>♥ 21</span>
-                            <span>💬 5 comments</span>
-                        </div>
-
-                        <button
-                            class="group-share-button"
-                            type="button"
-                            onclick="shareGroup('Padel at Dawn')">
-                            ↗ Share
-                        </button>
-
-                    </div>
-
-                    <div class="group-card-accent"></div>
-
-                </article>
-
-            </div>
-
-
-            <!-- ================= JOIN COMMUNITY ================= -->
-
-            <div class="community-cta">
-
-                <div>
-                    <span class="section-label">YOUR NEXT CHAPTER</span>
-                    <h2>Your team is <span>out there.</span></h2>
-                    <p>
-                        Sign in to get started and discover more ways to play.
-                    </p>
                 </div>
 
-                <a href="singin.html" class="community-primary-button">
-                    Join PRIME ↗
-                </a>
+                <div class="faq-item">
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                        aria-expanded="false"
+                    >
+                        Are the coaches certified?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Coach qualifications and experience can vary.
+                        Check each coach's profile and credentials before
+                        arranging a training session.
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                        aria-expanded="false"
+                    >
+                        Can I cancel a booking?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Cancellation conditions may depend on the court
+                        or provider. Please check the booking terms or
+                        contact the relevant provider for assistance.
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                        aria-expanded="false"
+                    >
+                        How can I join the PRIME community?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Explore our Community page to discover ways to
+                        connect with athletes, coaches, and other people
+                        who share your passion for sports.
+                    </div>
+
+                </div>
 
             </div>
 
-            <p class="community-note">
-                Group names, member counts and engagement numbers are sample
-                information for this project.
+        </section>
+
+        <!-- ================= CTA ================= -->
+
+        <section class="contact-cta">
+
+            <span class="section-label">
+                YOUR NEXT GAME STARTS HERE
+            </span>
+
+            <h2>
+                Find your court.<br>
+                Find your people.
+            </h2>
+
+            <p>
+                Discover new places to play, connect with athletes,
+                and take the next step in your sports journey.
             </p>
+
+            <a href="courts.html" class="cta-button">
+                EXPLORE COURTS ↗
+            </a>
 
         </section>
 
     </main>
 
-
     <!-- ================= FOOTER ================= -->
 
-    <footer class="site-footer">
+    <footer>
+        <a href="index.html" class="logo">
+            PRIME<span></span>
+        </a>
 
-        <div class="footer-content">
+        <p>
+            Find your game. Build your community.
+        </p>
 
-            <div class="footer-brand">
-                <a href="index.html" class="logo">PRIME<span>.</span></a>
-                <p>Find your game. Find your people. Play more.</p>
-            </div>
-
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="courts.html">Courts</a>
-                <a href="community.html">Community</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2026 PRIME. All rights reserved.</p>
-        </div>
-
+        <p>
+            &copy; 2026 PRIME. All rights reserved.
+        </p>
     </footer>
 
-
-    <!-- ================= SHARE FUNCTION ================= -->
+    <!-- ================= JAVASCRIPT ================= -->
 
     <script>
-        function shareGroup(groupName) {
-            const shareData = {
-                title: "PRIME Community",
-                text: "Check out the " + groupName + " group on PRIME!"
-            };
+        // Contact form: opens the visitor's email application.
 
-            if (navigator.share) {
-                navigator.share(shareData).catch(function () {});
-            } else if (navigator.clipboard) {
-                navigator.clipboard.writeText(
-                    shareData.text
-                ).then(function () {
-                    alert("Group message copied!");
-                }).catch(function () {
-                    prompt("Copy this message:", shareData.text);
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const topic = document.getElementById("topic").value;
+            const message = document.getElementById("message").value.trim();
+
+            const subject = encodeURIComponent(
+                "PRIME Contact: " + topic
+            );
+
+            const body = encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Topic: " + topic + "\n\n" +
+                "Message:\n" + message
+            );
+
+            window.location.href =
+                "mailto:hello@prime.app?subject=" +
+                subject + "&body=" + body;
+        });
+
+        // FAQ accordion.
+
+        const faqItems = document.querySelectorAll(
+            ".contact-page .faq-item"
+        );
+
+        faqItems.forEach(function (item) {
+            const question = item.querySelector(".faq-question");
+            const symbol = question.querySelector("span");
+
+            question.addEventListener("click", function () {
+                const isOpen = item.classList.contains("active");
+
+                faqItems.forEach(function (otherItem) {
+                    otherItem.classList.remove("active");
+
+                    const otherQuestion =
+                        otherItem.querySelector(".faq-question");
+
+                    otherQuestion.setAttribute("aria-expanded","false");
+                    otherQuestion.querySelector("span").textContent = "+";
                 });
-            } else {
-                prompt("Copy this message:", shareData.text);
-            }
-        }
+
+                if (!isOpen) {
+                    item.classList.add("active");
+                    question.setAttribute("aria-expanded", "true");
+                    symbol.textContent = "−";
+                }
+            });
+        });
     </script>
 
 </body>

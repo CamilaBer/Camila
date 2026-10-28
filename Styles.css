@@ -3124,16 +3124,35 @@ tr:hover td {
 
 /* FAQ */
 
+
 .contact-faq {
     padding: 80px 9%;
     background: #101010;
     border-top: 1px solid #242424;
     border-bottom: 1px solid #242424;
+
     display: grid;
-    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
-    gap: 65px;
+    grid-template-columns: minmax(0, 850px);
+    justify-content: center;
+    gap: 35px;
     align-items: start;
+    box-sizing: border-box;
 }
+
+.contact-faq-intro {
+    width: 100%;
+}
+
+.contact-faq-intro > p:last-child {
+    max-width: 600px;
+}
+
+.contact-faq-list {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 
 .contact-faq-intro > p:last-child {
     color: #999;
@@ -5618,4 +5637,227 @@ body.home > header > .signin-button {
 
 .blog-cta h2 span {
     color: #ff5a00;
+}
+
+
+/* ===== PRIME CONTACT FAQ - LAYOUT FIX ===== */
+
+body.contact-page .faq-section {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 90px 8%;
+    background: #111111;
+}
+
+body.contact-page .faq-section .faq-heading {
+    display: block !important;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    box-sizing: border-box;
+}
+
+body.contact-page .faq-section .faq-heading h2 {
+    color: #ffffff;
+    max-width: 750px;
+}
+
+body.contact-page .faq-section .faq-heading p {
+    max-width: 600px;
+    color: #aaaaaa;
+    line-height: 1.8;
+}
+
+body.contact-page .faq-section .faq-list {
+    display: block !important;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body.contact-page .faq-section .faq-item {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #333333;
+}
+
+body.contact-page .faq-section .faq-question {
+    display: flex !important;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 0;
+    box-sizing: border-box;
+    text-align: left;
+    color: #ffffff;
+}
+
+body.contact-page .faq-section .faq-question span {
+    flex: 0 0 auto;
+    color: #ff5a00;
+}
+
+body.contact-page .faq-section .faq-answer {
+    display: none;
+    position: static !important;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 35px 24px 0;
+    box-sizing: border-box;
+    color: #aaaaaa;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+body.contact-page .faq-section .faq-item.active .faq-answer {
+    display: block !important;
+}
+
+@media (max-width: 800px) {
+    body.contact-page .faq-section {
+        padding: 65px 6%;
+    }
+
+    body.contact-page .faq-section .faq-heading,
+    body.contact-page .faq-section .faq-list {
+        max-width: 100%;
+    }
+}
+
+
+/* ================= BLOG CARDS FIX ================= */
+
+.blog-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: stretch;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #292929;
+    border-radius: 18px;
+    background: #141414;
+    transition:
+        box-shadow var(--prime-transition),
+        transform var(--prime-transition);
+}
+
+.blog-image {
+    position: relative;
+    min-width: 0;
+    min-height: 280px;
+    height: 100%;
+    overflow: hidden;
+    background: #222222;
+}
+
+.blog-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.blog-image-link {
+    display: block;
+    min-width: 0;
+    text-decoration: none;
+}
+
+.blog-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+.blog-card-content .blog-meta {
+    color: #ff5a00;
+    font-size: 12px;
+    line-height: 1.7;
+    font-weight: 700;
+    overflow-wrap: break-word;
+}
+
+.blog-card-content h3 {
+    color: #ffffff;
+    font-size: clamp(20px, 2vw, 27px);
+    line-height: 1.3;
+    margin: 18px 0;
+    overflow-wrap: break-word;
+}
+
+.blog-card-content .blog-excerpt {
+    color: #b5b5b5;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 0 24px;
+}
+
+.blog-card-content .blog-read-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 22px;
+    border-top: 1px solid #303030;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.blog-card-content .blog-read-more span {
+    color: #ff5a00;
+    font-size: 20px;
+}
+
+.blog-card:hover {
+    border-color: #ff5a00;
+    transform: translateY(-3px);
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.04);
+}
+
+/* ================= BLOG RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .blog-card {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    }
+
+    .blog-card-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-card {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-image,
+    .blog-image img {
+        height: 230px;
+        min-height: 230px;
+    }
+
+    .blog-card-content {
+        padding: 24px;
+    }
+
+    .blog-card-content h3 {
+        font-size: 24px;
+    }
 }
